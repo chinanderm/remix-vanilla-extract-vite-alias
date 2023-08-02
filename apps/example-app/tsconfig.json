@@ -1,0 +1,17 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "include": [
+    "./**/*.ts",
+    "./**/*.tsx",
+    "remix.env.d.ts",
+    "remix.config.js"
+  ],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@my-shared-lib/*": [
+        "../../libs/my-shared-lib/src/*"
+      ]
+    }
+  }
+}

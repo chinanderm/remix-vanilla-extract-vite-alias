@@ -1,0 +1,32 @@
+diff --git a/node_modules/@vanilla-extract/integration/dist/vanilla-extract-integration.cjs.dev.js b/node_modules/@vanilla-extract/integration/dist/vanilla-extract-integration.cjs.dev.js
+index f9ece42..1528900 100644
+--- a/node_modules/@vanilla-extract/integration/dist/vanilla-extract-integration.cjs.dev.js
++++ b/node_modules/@vanilla-extract/integration/dist/vanilla-extract-integration.cjs.dev.js
+@@ -587,6 +587,11 @@ const createViteServer = async ({
+     ssr: {
+       noExternal: true
+     },
++    resolve: {
++      alias: {
++        '@my-shared-lib': path.resolve(root, '../../../libs/my-shared-lib/src'),
++      },
++    },
+     plugins: [{
+       name: 'vanilla-extract-externalize',
+       enforce: 'pre',
+diff --git a/node_modules/@vanilla-extract/integration/dist/vanilla-extract-integration.cjs.prod.js b/node_modules/@vanilla-extract/integration/dist/vanilla-extract-integration.cjs.prod.js
+index 789a0c8..6189249 100644
+--- a/node_modules/@vanilla-extract/integration/dist/vanilla-extract-integration.cjs.prod.js
++++ b/node_modules/@vanilla-extract/integration/dist/vanilla-extract-integration.cjs.prod.js
+@@ -587,6 +587,11 @@ const createViteServer = async ({
+     ssr: {
+       noExternal: true
+     },
++    resolve: {
++      alias: {
++        '@my-shared-lib': path.resolve(root, '../../../libs/my-shared-lib/src'),
++      },
++    },
+     plugins: [{
+       name: 'vanilla-extract-externalize',
+       enforce: 'pre',

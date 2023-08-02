@@ -1,0 +1,13 @@
+{
+  "name": "example-app",
+  "version": "0.0.0",
+  "private": true,
+  "license": "UNLICENSED",
+  "sideEffects": false,
+  "scripts": {
+    "dev": "nx exec -- remix dev"
+  },
+  "devDependencies": {
+    "@vanilla-extract/css": "^1.11.0"
+  }
+}
